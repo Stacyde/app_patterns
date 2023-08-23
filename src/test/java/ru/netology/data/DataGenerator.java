@@ -22,15 +22,12 @@ public class DataGenerator {
     }
 
     public static String generateCity() {
-        // var faker = new Faker(new Locale("ru"));
-        //String city = faker.address().city();
         List<String> list = Arrays.asList("Майкоп", "Улан-Удэ", "Симферополь", "Саранск",
                 "Грозный", "Петропавловск-Камчатский", "Астрахань", "Калининград", "Калуга", "Санкт-Петербург", "Москва",
                 "Оренбург", "Ростов-на-Дону", "Саратов", "Саранск", "Ульяновск", "Хабаровск", "Херсон", "Санкт-Петербург",
-                "Биробиджан", " Салехард","Нижний Новгород");
+                "Биробиджан", " Салехард", "Нижний Новгород");
         Random rand = new Random();
         String city = list.get(rand.nextInt(list.size()));
-
         return city;
 
 
@@ -45,7 +42,6 @@ public class DataGenerator {
     public static String generatePhone(String locale) {
         var faker = new Faker(new Locale("ru"));
         String phone = faker.phoneNumber().phoneNumber();
-        // String phone = faker.numerify("+7##########");
         return phone;
     }
 
